@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Monty Payments -- Login</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<h1>Monty Payments - Login</h1>
+<section class="content">
+  <header>
+    <h2>Login As User (development mode only)</h2>
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  <form id="login" method="post" action="{{ url_for('login') }}">
+    <label for="username">Login as username:</label> <input type="text" name="username" required> <input type="submit" value="Login">
+  </form>
+</section>

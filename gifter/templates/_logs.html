@@ -1,0 +1,21 @@
+<table class="action_log">
+	<thead>
+		<th class="time">Time</th>
+		<th class="admin">Admin</th>
+		<th class="action">Action</th>
+		<th class="note">Note</th>
+	</thead>
+
+	<tbody>
+		{% for log in logs %}
+		<tr>
+			<td class="time">{{ log.created_at }}</td>
+			<td class="admin">{{ log.admin }}</td>
+			<td class="action">{{ log.description }}</td>
+			<td class="note">{{ log.note }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+

@@ -1,0 +1,21 @@
+<!doctype html>
+<title>Monty Payments -- {% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='jquery-3.5.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<nav>
+  <h1>Monty Payments - {{title}}</h1>
+  <ul>
+      <li><span><b>Welcome {{ g.admin['username'] }}</b></span>
+      <li><a href="{{ url_for('logout') }}">Log Out</a>
+  </ul>
+</nav>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</section>
