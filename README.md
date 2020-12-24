@@ -1,9 +1,9 @@
-= Gifter - A MontyHub Project =
+# Gifter - A MontyHub Project #
 
 The purpose of this project is track payments, shares and other benefits for 
 MontyHub members.
 
-== INSTALLATION ==
+## INSTALLATION ##
 
 General requirements:
 
@@ -13,7 +13,7 @@ General requirements:
 
 pip3 -r install requirements.txt
 
-== QUICKSTART ==
+## QUICKSTART ##
 
 Run "./run.sh" to start up a development service on http://localhost:5000 
 
@@ -21,7 +21,7 @@ In development mode you will be able to login simply by specifying a username
 (no password required). In production mode we will use SAML to log into google 
 workspace using the montyhub.org account
 
-== HACKING ==
+## HACKING ##
 
 This project is built on python and based around two or three main components:
 
@@ -32,7 +32,7 @@ This project is built on python and based around two or three main components:
 * JQuery  -- Javascript library for all the frontend interactive stuff
 	-- https://jquery.com/
 
-=== PROJECT STRUCTURE ===
+### PROJECT STRUCTURE ###
 
     requirements.txt -- pip3 modules needed to run the project
     run.py           -- python file to start dev server
@@ -49,7 +49,7 @@ This project is built on python and based around two or three main components:
           style.css -- css file
           script.js -- main javascript file (jquery)
 
-=== DATABASE MODEL ===
+### DATABASE MODEL ###
 
 * ActionLog  -- All actions taken by admins are recorded in this append only log
 * AdminUser  -- an administrator
